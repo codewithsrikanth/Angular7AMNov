@@ -1,0 +1,1319 @@
+What is Angular?
+- Angular is a open-source frontend development framework developed by google.
+
+Why Angular?
+- It is used to build web and mobile interactive dynemic web applications.
+
+Frontend/Client : Browser(Chrome,Firefox, IE, Edge etc.)
+	- Html, CSS,Bootstrap, Javascript, JQuery,Angular JS, Angular etc.
+
+Static: A page which can't changes it's content based on the request.
+- To build static page we use static technologies like HTML, CSS, SASS,LESS, Bootstrap etc.
+
+Dynemic: A page which can changes it's contetn based on user's request.
+- To build dynemic pages Javascript, jQuery, Angular JS, Angular, React JS, Vue JS etc.
+
+
+Backend: Server(DB Server, Web Server)
+	- ASP.Net/ASP.Net MVC/JSP/Struts MVC/JDBC/Php etc.
+
+Prerequisites:
+HTML, CSS and Javascript(5 Hrs)
+
+Note: 
+- Angular JS and Angular both are entirly different.
+- To learn about Angular2+ it's optional to have the knowledge on Angular JS.
+- Angular2+ is a complete re-write of Angular JS 1.x.
+
+Javascript
+Type Script
+Angular App Developement
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Librabry: It is a set of functionalities, Once if it is developed it is very easy to use.Examples: jQuery, Angular JS etc.
+
+Framework: It is a collection of librabries and also an environment to build application. Examples: Angular, .Net
+
+- If it is an Angular JS we can directly include into the HTML by using <script> tag.
+- Angular is a framework , so that to build application by using it we need to have environment.
+
+Software Requirements to build Angular Applications:
+- In order to build Angular2+ or any Higher versions of angular in your machine we need to have following things.
+	- IDE/Code Editor 
+	- Node JS
+	- NPM(Node.js Package Manager)
+	- TypeScript
+	- Angular CLI(Command Line Interface)
+
+
+IDE(Integrated Dev Environment)/Code Editor:
+- Code Editor is used to write the code and to compile/run the application will depend on some other tools.
+- Examples: Notepad, Notepad++,Sublime,Atom,WebStrom etc.
+- IDE is integrated everything like Write code  Compile Code and also Execute the Code.
+- Examples: Visual Studio Code
+- Here to build Angular applications mostly we using "Visual Studio Code".
+
+Advatages of Visual Studio Code:
+- It is Open source code editor, provided by Microsoft.
+- It is light weight.
+- It supports major programming languages Java, C#.Net, C, C++, Typescript, HTML, Javascript etc.
+- It having built in support for "GitHub".
+- It support intellisence feature.
+- It support debugging.
+- It support extensions which can be used to build applications.
+
+Installing Node.js and NPM:
+- Node.js is a server which will takecare the execution of Angular Applications.
+- If we want to work with Angular10, minimum Node.js version shoud be greater than 4.6.
+- It is a server used to run packages that are installed through NPM.
+- NPM stands for "Node Package Manager", It is a repository which contains all the packages for client side application development.
+- Once we install Node.js then NPM will be automatically installed.
+- To check the versions that are installed in our OS we use the following commands like
+	Node.js		-	node -v
+	NPM		-	npm -v
+
+Typescript:
+- It is a superset of Javascript.
+- Typescript = Javascript + Datatypes.
+- It comes with proper syntax which can be used to define the JS members.
+- To Install the typescript we use follwoing command like
+	> npm install -g typescript@[version]
+- To verify the version of typescript we use command like
+	> tsc -v
+
+Angular CLI:
+- CLI means Command Line Interface used to write the commands.
+- Angualr CLI is used to create, build and run the angular applications by writing commands.
+- To verify the version we use 
+	> ng version
+- To install the Angular CLI we use command like
+	> npm install -g @angular/cli
+-------------------------------------------------------------------------------------------------------------
+Create First Angular Application:
+- To create Angular application we have to follow below steps
+Note: To create an angular appliction by using Angular CLI, we must have npm and Angular CLI installed in the machine.
+
+Step-1: Open the Command Prompt with adminstrator permissions.
+Step-2: Specify the location where we want to create Angular application.
+	> D:
+	> cd  D:\AngularExamples
+Step-3: To create an Angular application we use command like
+	> ng new <applicationName>
+Note:
+- Once if  we enter will get two questions
+	- About Routing > Y
+	- Stylesheet > CSS
+- Once if the application is ready we have to chnage the directory.
+Step-4: Execute the application
+	> ng serve/ng serve --open
+Once we execute the above command it will open the application in browser with port number i.e. 4200.
+--------------------------------------------------------------------------------------------------------------
+Folder Structure of an Angular10 application:
+e2e folder: 
+It stands for End to End Testcases. It is not unit testing functionality, rather it will test the application/monitor at production server. It monitors everything that who logged in into the application, how much time spent in the app, how many pages visits and when loged out that information is tracked by e2e folder.
+
+Dev Environement	=>	QA/Testing Env	=>	Production Env
+Unit Testing	=>	Bugs		=>	e2e folder	
+
+node_modules: 
+This folder contains collection of packages that are used to run the angular applications, these packages wil get installed automatically when we created a first angular application. Later if we install thrid party packages like bootstrap, jquery, popper.js etc. if we install will be there in the node_modules folder.
+
+src:
+Source folder for the application, This folder can be used to write the source code by the developer and it can contains components, services, modules, routings etc.
+
+app Folder:
+This is the application folder. Whenever you want to create any component, service or module, you need to create within this app folder. Please have a look at the following image which shows the files which are by default created within the app folder when you create an angular application. As you can see, by default it creates one component (app.component.ts) and one module (app.module.ts) and an angular application should have at least one component and one module.
+
+assets Folder:
+This is the folder where you can store the static assets like images, icons, etc. which needed to be copied extensively while building your application. Please have a look at the default assets folder which angular framework creates for us.
+
+environments Folder:
+This folder is basically used to set up different environments. Here, you can find two files as shown in the below image.
+
+environments Folder in angular:
+You can use this file to store environment (either production or development environment) specific configuration such as the database credentials or server IP addresses. These two files are as follows:
+- environment.prod.ts. This file for the production environment.
+- environment.ts. This file for the development environment.
+
+favicon.ico:
+It is the icon file that displays on the browser tab.
+
+index.html:
+This HTML file contains HTML code with the head and body section. It is the starting point of your application or you can say that this is where our angular app displayed. If you open it you will find that there are no references to any stylesheet (CSS) nor JS files this is because all dependencies are injected during the build process.
+
+main.ts file:
+This is the entry point for our angular application. If you ever worked with programming languages like Java or C or C#, then you can compare this with the main() method of such application.
+
+polyfills.ts:
+This file is basically used for browser-related configuration. In angular, you write the code using typescript language. The Polyfills.ts file is used by the compiler to compile your Typescript code to a specific JavaScript method so that it can be parsed by different browsers.
+
+The polyfill.ts file imported the required script which is required for running an Angular application. This is because the angular framework uses the latest features of JavaScript which are not available in the current version of JavaScript supported by most of the browsers. So, basically, the polyfills.ts file fills the gap to provide the features of JavaScript that are needed by Angular and the feature supported by the latest browsers. It is mainly used for backward compatibility
+
+.editorconfig file:
+This file is basically used to set up the team environment. In real-time, many developers may work on a single project. And each developer may follow different coding standards to declare variables, classes, style, size of each character, length, etc. But in the end, we need to merge the code of each developer to produce the final product. At that time, it may produce some error or messy code as each developer having different coding standards. In order to solve this problem, the editorconfig file is used where the standard rules are defined which needs to be followed by the developers in teamwork. And moreover, the developers do not have access to this file and only the manager or the team lead who defines the rules can only have access to this file.
+
+.gitignore file:
+The files which you want to ignore in the git repository, you need to put within this gitignore file.
+
+angular.json file:
+From angular 6, the angular-cli.json file has been replaced by angular.json. That means if you are working with angular 5 or any lower, then you will not find this file instead you will find the angular-cli.json file.
+
+This is one of the most important files and it contains all the configuration of your Angular Project. It contains the configurations such as what is the project name, what is the root directory as source folder (src) name which contains all the components, services, directives, pipes, what is the starting point of your angular application (index.html file), What is the starting point of typescript file (main.ts), etc. We will discuss this file in detail in our upcoming article.
+
+browserslist:
+This file is currently used by autoprefixer to adjust CSS to support the specified browsers.
+
+test.ts and karma.config.js
+These two files are basically used for testing purposes.
+
+The test.ts file is the configuration file of Karma which is used for setting the test environment. Within this file, the tester will write the unit test cases for testing the project.
+The karma.config.js file is used to store the setting of karma i.e. test cases. It has a configuration for writing unit tests. Karma is the test runner and it uses jasmine as a framework. Both tester and framework are developed by the angular team for writing unit tests.
+package-lock.json:
+The package-lock.json is automatically generated for those operations where npm modifies either the node_modules tree or package.json. In other words, the package.lock.json is generated after an npm install. We will discuss this file in detail in our upcoming articles.
+
+package.json:
+This file is mandatory for every npm project. It contains basic information regarding the project (name, description, license, etc), commands which can be used, dependencies – these are packages required by the application to work correctly, and dependencies – again the list of packages which are required for application however only during the development phase i.e. we need Angular CLI only during development to build a final package however for production we don’t use it anymore. We will discuss this file in detail in our upcoming articles.
+
+README.md file:
+README is the file that contains the description or description of the project which we would like to give to the end-users so that they can start using our application in a great manner. This file contains the basic documentation for your project, also contains some pre-filled CLI command information.
+
+tsconfig.app.json:
+This file is used during the compilation of your application and it contains the configuration information about how your application should be compiled.
+
+tsconfig.json:
+This file contains the configurations for typescripts. If there is a tsconfig file in a directory, that means that directory is a root directory of a typescript project, moreover, it is also used to define different typescript compilation related options.
+
+tsconfig.spec.json:
+This file is used for testing purposes in the node.js environment. It also helps in maintaining the details for testing.
+
+tslint.json:
+This is a tool useful for static analysis that checks our TypeScript code for readability, maintainability, and functionality errors. 
+--------------------------------------------------------------------------------------------------------------
+Javascript:
+
+1995 - Netscape Communication(Brenden Eich)
+1996 - ECMA Script 1.0
+1998 - ECMA Script 2.0
+1999 - ECMA Script 3.0
+2009 - ECMA Script 5.0 (Ajax - jQuery)
+2015 - ECMA Script 6.0
+
+What is Javascript?
+- Javascript is the one of most importent Scripting language whcih is having light weight, interprted, open source and also cross platform.
+- Javascript is an object based programmning langauge.
+- It is used to build dynemic web application by using less resources.
+
+Why Javascript is required?
+- Used for client validations
+- Used to insert dynemic text/content into the HTML(Manipulating DOM)
+- Events
+- Ajax(Can be used to communicating with server asynchonusly).
+- Animations
+- Storage(Local Storage, Session Strogae and Coockies) 
+- Browser level calculations etc.
+
+	Browser			JS Engine
+Google Chrome/Opera	-	V8
+Fire Fox			-	SpiderMoney
+Internet Explorer		-	Chakra
+Edge			-	Chakra Core
+----------------------------------------------------------------------------------------
+HTML 	- Static web pages
+DHTML 	- HTML + CSS + JS
+
+Javascript:
+Where do we write the Javascript?
+- To include the javascript we use <script>.
+- JS code can be included from <head> or <body>.
+- When we want to load javascript with html then we use it in the <head> section, else when we want to perform event based loading then will use in <body>.
+- <script src="location of js" type="text/javascript"></script>
+Note: Writing JS code in <body> is a best practice.
+
+How to create a variables?
+- A variable is a named memory loaction, used to store the value.
+- To create a vraible we use "var".
+- In JS variables are not typesafe, which means we can store any type of value into it.
+- Example: var x = 10;
+
+How do we write functions?
+- A function is a reusable block of code, which can be used to execute some logic.
+- To create a function in JS we use "function" keyword.
+function F1([parameters]){
+    //Logic
+}
+
+How to work with Event Handling?
+- Events are the actions performed by user.
+- Every event in JS will start with "on".
+- JS supports different events like
+	- onclick
+	- onmouseover
+	- onmuseout
+	- onblur
+	- onfocus
+	- onload etc.
+- These events will manipulate the DOM.
+- When event is happen then we are handle that with a function i.e. "Event Handler"
+
+How to do typecasting?
+- By default every input from the user wil be treat it as a string based content.
+- Type casting is nothing but changing the data type.
+- To do that JS provide two methods like
+	- parseInt()
+	- parseFloat()
+
+What is a DOM?
+- DOM stands for Document Object Model.
+- While developing HTML pages we use html tags, once these are are executed in browser it will be DOM.
+- For every Html elements browser will create an obejct and these objects all together we call it as DOM objects and it will be like a tree.
+- Every tag can be accesed from a default object i.e. "document".
+- DOM provide different methods to access elements at runtime.
+	document.getEelmentById("");
+	document.getEelementByName("");
+	document.getEelementByTagName("");
+	document.getEelementByClassName(""); etc.
+
+Debugging:
+- It is a line by line execution while executing the code.
+- It gives you clear idea about application execution.
+- For every browser we have Developer Tools are avaible to debug the application.
+----------------------------------------------------------------------------------------
+Javascript Programming:
+Conditional Statements: These are used to execute a block of statements based on conditions.
+	- Simple If
+	- If else
+	- If else if statement
+	- Switch Statement
+- To write the Javasctipt in the HTML we have two options
+	- We can write in the HTML document by using <script> - Internal
+	- We can write in a seperate file with an extension *.js and include using <script> tag - External
+----------------------------------------------------------------------------------------
+Functions: 
+- A function is a colection of statements that can be execcuted again and again when ever we required.
+- We have the following advantages like
+	- Split the large program into smaller
+	- Better organizing the code
+	- Reusability and easily we can understand the code.
+- To create the functions we use "function" keyword
+function <fun_name>([params]){
+	//Statements
+}
+
+1. Normal Definition
+function F1(){statements;}		//Method: Will not return anything
+
+2. Function by using expressions
+var x = function() {statements;}	//Function: Will return a value.
+
+3. Constructor functions
+var x = new function(statements;);
+----------------------------------------------------------------------------------------
+Arrays and Objects:
+- An Array is a variable which will store the data of key and value pair, where key is an index and value is any type.
+	Example: var AR = [10,20,30,40];
+- To create an object we have 3 ways 
+	- Direct Object by using "JSON"
+	- Object creation with "new" and "Object" constructor(very rarely)
+	- By using constructor function.
+
+- JSON stands for "Javascript Object Notation", it is used to stores the data in key and value pair, but key and value can be defined by our own.
+	Example: var std = {Sno:123,Sname:'Srikanth',Course:'Angular9'};
+- we can use "new" keyword and "Object" constructor to create objects
+- constructor option is suitable to cerate multiples objects with different values, without writing multiple times, in this we use "this" keyword and it is refered as current class instance.
+----------------------------------------------------------------------------------------
+Type Script: It is a sub set of Javascirpt programming only, the compiled version of type script is javascript.
+
+Limitations of Javascript:
+- Javascript is not a type safe programming.
+- Javascript is not having compiler to show compilation errors.
+- Writing plain Javascript to build enterprize level applications is a difficult task.
+- Debugging is a bit difficult.
+
+Advatages of Typescript:
+- It is not replacement of javascript nor it doesn't add any new features to javascript.
+- Typescript = Javascript + Datatypes = Typed Superset of Javascript
+- It is completly strongly typed
+- Once we compile typescript, automatically it generates javascript.
+- It is supports all object oriented programming concepts like
+	- Classes
+	- Objects
+	- Inheritence
+	- Polymorphism
+	- Abstract classes
+	- Interfaces
+	- Modules(export/import) statements etc.
+
+Note: 
+- To install the typescript "npm install -g typescript@latest"
+- To check the version of the typescript "tsc -v"
+- Once we write the typescript code to compile it we use "tsc <filename>.ts"
+- To execute the files we can use "node <filename>.js".
+
+Basic data types in Typescript:
+- One of primary feature of typescript is "datatypes".
+- There are two types are avaible like
+	- Primitive/Normal types: boolean, number, string etc.
+	- Non-Primitive/Complex types: Arrays,classes, objects, modules etc. 
+- To declare a variable in TS we use "var / let / const".
+var variable:datatype = value;
+let variable:datatype = value;
+
+
+let x:number = 10/10.25/3.14f;		//Number
+let x:boolean = true/false;			//Boolean
+let x:string = "Welcome"/'Welcome'/`Welcome`;// String
+let x:number[] = [10,20,30,40,50];		//Array
+let x: Array<string> = ["JS","jQuery","Angular JS"];//Array
+----------------------------------------------------------------------------------------
+Difference between var, let and const:
+- Once we define a varible with let that is function scope, but if we define a varibale with var i.e. global scope
+- With in the scope we can't redeclare the let members, but if it is a var member we can redeclare it for any number of times.
+- Once we define a variable with let that value will be avaible in that scope, in other scope if we define will not be impaceted, but if it is a var once we create will be used in anywhere and will modify with updated values.
+Note: In Typescript we use "let".
+
+Const:
+- It is avaible in typescript, which can be immutable, once we initilized we can't change it.
+	const x = 10;
+
+
+Loops: for..in and for..of
+- The above two loops are used to process the collections/ complex types.
+- If we want to get the index then will use "for..in".
+- If we want to get the value from the collection then we use "for..of".
+
+Tuple: It store the values of different types, based on the declaration.
+let x:[number,string,number];
+x = [22,"Jul",1990]
+
+Enum:It is used to add the named constants.
+let x = enum Colors{Red=1245,Green=8547,Blue=8545,Yellow}
+Note: It is similar to a class, so that we always define enums globally.
+----------------------------------------------------------------------------------------
+Object Based Programming with Typescript:
+- If any PL is an OOPS, it supports 4 features
+
+Encapsulation: Binding the data members with member functions.
+Abstarction: Hiding the implmentation and provide services.
+Polymorphism: One to many behaviours 
+Inheritence: It is the concept of aquiring the properties from one class to other.
+
+Class: 
+- A class is a collection of data members and member functions.
+- A class is a collection of similar items together,  a class is a logical existence.
+- A class is a user defined datatype, object is an variable of that class type
+
+Object:
+- An object is an instance of class
+- An Object is a physical existence.
+
+Constructor:
+- It is a special method, whcih can be invoked automatically, when an object to teh class is created.
+- To create a constructor, we use "constructor".
+- It is used to intilize the data to the fileds.
+- We can have only one constructor in typescript.
+Note: In typescript we use "this" keyword to access the members of the class.
+
+
+- Define a class
+- Write the properties
+- Use constructors
+- Creating methods
+- Creating an object
+- Executing methods
+----------------------------------------------------------------------------------------
+Access Modifers:
+- It provides you an access for  class members, that the member can be accessible in the class or in another class or in other derived class.
+- Three types access modifiers
+	- private: These members can be accessible only within class.
+	- public: These can be accessible any where.
+	- protected: These can be accessible in same class and Derived class.
+- By defualt all the typescript class members are "public".
+- A class is not supported for access modfier.
+
+Inheritence:
+- It is the process of aquiring the properties of one class into other.
+- Like other languages in typescript also, it supports all the inheritence concepts
+	- Single: Single Base class + Single derived class
+	- Multi Level: A child class can be a base class for other.
+	- Heirarichal: Multiple childs for single parent
+	- Multiple(Interfaces): Multiple parent + Single Child
+	- Hybrid: Combination of any two.
+- In Inheritence process the class that gives property is a base/parent/super class, and the class that consume property is a derived/child/sub class.
+- In Inheritecne a derived class obejct is having complete control on base class, so that always will create object for derived classes.
+- To inherit any class from any other class we use "extends" keyword.
+- It is manily used for reusability.
+
+Polymorphism:
+- Poly means many and morphism means behaviours.
+- In typescript static polymorphism can't be possible(Method Overloading).
+- Dynemic polymorphism can be possible by using (Method Over riding).
+----------------------------------------------------------------------------------------
+Abstract class:
+- A class which contains one or more abstarct methods is called abstarct class.
+- A abstract class can have normal members and also abstarct members.
+- Abstract classes can't be instantiate directly.
+- So that creating derived class is mandatory for abstract classes.
+- Once we derive a class from an abstarct class, it is must to provide implementation for base abstract members.
+
+Note: But we can create an object and instantiate with another class memory, i.e. called object reference.
+
+Asssignment-1: Implement MultiLevel Inheritence
+----------------------------------------------------------------------------------------
+Interfaces in Typescript:
+- An interface is a contract between itself and it's derived classes.
+- A contract is nothing but interface will provide rules to write the code and derived class must follow them and implement.
+- An interface is having just declaration and not the implmentation, once we create a derived class we must provide the implmentation.
+- Every member in interface is an abstract and public by default.
+- If we want to create a derived class from an interface we use "implements"  keyword.
+Note: Javascript is not supports interfaces.
+
+Modules:
+- In large scale applications, it is recommended to write each class in a seeprate files.
+- To access classes from one file to another file we use concept of modules
+- A module is a file which contains import and export files.
+- Once if the class/interface is exported then we can import to another file else it gives an error.
+- We can export class to other files by using "export" keyword.
+- We can import a class from other files which was exported we use "import" keyword.
+
+	current Folder 		: "./"
+	sub Folder in current folder	: "./subfolder/"
+	parent folder		: "../"
+
+Asssignment-2: Implement Multiple Inheritence with Interfaces.
+--------------------------------------------------------------------------------------------------------------
+Building blocks of Angular Applications:
+Angular is made of following things like
+- Component: It is used to maintain the state/data of the application, and also components can be used to write the application logic. Angular framework is completly madeup with the help of components.
+
+- Template/Html: It contains HTML logic(Presentation Logic) which can get the data from the component and display by using HTML tags.
+
+- Data Binding:It is communication between component and HTML to share the data.
+
+- Meta Data/Decorator: This will contain information about the components, services, pipe, directives etc.
+
+- Directives: It is an angular element, which is used to maipulate the DOM means, Add/Remove the HTML elements dynemically and also it is used to change the Behaviour means adding or removing css styles dynemically.
+
+- Services: It is resuable code that can shared across multiple components.
+
+- Depedency Injuction: It is a design pattern, which can be used to make application as loosly coupled and also in angular it is used to Injecting(Loading) service object into components.
+
+- Pipes: It is used to transform the values, without changing the value of original one.
+
+- Routing: It is used to provide the navigation facility for the angular application.Angular is having a feature i.e Single Page Application, where the complete application content will be loaded into single page, inorder to implement that we can have routing.
+
+- Modules:It is used to improve the modularity for an application, It contain group of components, directives, services etc., based on the module level.
+--------------------------------------------------------------------------------------------------------------
+Note: Once we share the project, first will install the node modules into the project folder by using a command i.e. "npm install" and then will run the application.
+- npm will take the package information from a file i.e. "package.json" and the required packages to run the angular application.
+
+Angular Application Execution:
+-> Once we run the angular application by using a command "ng serve" then it will excute the applicaation in following sequence.
+
+=> Main.ts => AppModule => AppComponent => Include the selector in index.html file
+
+Packages in Angular:
+- Angular is completly developed based on packages.
+- And to each feature of an angular application we must have to install all the packages based on the requiremnt.
+- We can download these packages from "npm" librabry.
+
+@angular/core:
+- This package provide the classes and interfaces that are used to run the angualr application. It is mandatory package to run the angular application.
+- It contains decorators like @Component, @NgModule,@Input, @Output @Inject etc. and also it comes with component life cycle hooks.
+
+@angular/compiler:
+- This package is used to convert template code into javascript code, In angular compiler is background thread which is not required to invoke explicitly.
+- This package was wrapped with a package "@angular/platform-browser-dynemic" and "@angular/platform-browser".
+
+@angular/platform-browser-dynemic:
+- It will takecare of compilation process of an angualr and also verify the browser compatability and throw exception in console.
+
+@angular/common:
+- This package contains pre-defined direcctives and pipes that are required to add the additional behviour to the template.
+- It contains directives like *ngIf, *ngFor, *ngSwitch etc.
+- It comes with pre-defined pipes like uppercase,lowercase,currency etc. and also it comes with a module "Common Module".
+
+@angular/forms:
+- To work with data entry forms we have to include this package.
+- This package contains ReactiveForms, Normal forms and validations
+
+@angular/router:
+- This is include the page navigation for an application, it have a module i.e. Routing Module
+
+@angular/http:
+- This is used to send Http based ajax request to the servers, This package will works based on a library i.e. Rxjs(Reactive extension for Javascript).
+- It comes with a module i.e. "HttpClientModule".
+
+@angular/meterial:
+- Dynemic UI creation.
+
+Note: The above all packages are available as the part of core library reference, but sometimes we may have to install third party libraries like
+	- Typescript
+	- System.js
+	- Rxjs
+	- Zone.js
+	- Jasmine,Protractor, Karma
+	- tslint
+--------------------------------------------------------------------------------------------------------------
+Components in Angular:
+- In Angular a component is a typescript class, whcih can be used to define the members and also used to present the data to the user.
+- Angular is complelty a component based architecture, which means we can have atleast one component inorder to run the application.
+- The defualt component is "app.component.ts", apart from that we can have any number of components in the application.
+- To invoke the component we use a tag "selector" by using this we can invoke the components in any where.
+- Every component in angular is having a decorator i.e. "@Component()"
+
+Syntax:
+import {Component} from "@angular/core";
+
+@Component({metadata})
+
+export class RegisterComponent{
+  	variables,
+	methods
+}
+
+Note: To create a component by using angular cli we use a command like
+	>	"ng generate component <nameOfComponent>"
+	>	"ng g c <nameOfComponent>"
+- Once we execute above command it will generate follwoing files like
+	- app.component.ts		: Businuss Logic
+	- app.component.html	: Presentation Logic
+	- app.component.css	: Style Sheet
+	- app.component.spec.ts	: Unit Testing Code.
+
+Metadata properties of angular @Component() decorator:
+- selector: Used to represent a tag name which is used to invoke the component
+- template: Used to write the HTML logic inside the component class.
+- templateUrl: Represents the html file that has to be rendered when the component invoked
+- styleUrls: It is a list of style sheets that can be given for an HTML pages
+- providers: Used to inject the services into the components.
+- animations: Represents the animations that to be performed in the component level.
+
+Note: A Project can have any number of components as per the requirement.
+----------------------------------------------------------------------------------------
+What is Module and how to use?
+- Module is used to improve the modularity for the angular application.
+- In Angular a module is a collection of Components, Pipes, Directives, Modules Services etc.
+- Everything once we create that has to be registered under the Module.
+- By the default angular application is having one Module i.e. "app.module.ts"
+- It is a typescript class file, if we want to convert it into a module we use a decorator i.e. "@NgModule()".
+
+Metadata Properties of a Module:
+- declarations: It is an array of elements, which can be used to keep all the components, pipes that are related to that module.
+
+- imports: Represents the list of modules that we want to import into the current module.
+Note: In this section we can include pre-defined modules like FormsModule, RectiveFormsModule,BrowserAnimationsModule, HttpClinetModule, RouterModule etc,
+
+- exports: Represnets the list of components and pipes that we want to share it to another modules.
+
+- providers: This is used to register the services, Once if we registered then we can use it in all the components that are part of the module.
+
+- bootstrap:Used to specify which component has to be displayed on the browser, when intial load of application.
+----------------------------------------------------------------------------------------
+Data Binding in Angular:
+- Sharing the data from component to the template and viceversa.
+- It is a relation between the template and component that, once if we do any modifications on component that will be modify the template and anything if we are modifying from template that value will chnage in component.
+- We have two types of data binding:
+	- One-Way Data Binding
+		- Interpolation Syntax	=> Component to Template
+		- Property Binding		=> Component to Template	
+		- Event Binding		=> Template to Component
+	- Two-Way Data Binding
+		- Two Way Binding ("NgModel")
+
+Interpolation Syntax: {{property}}
+- It displays the value of the property in the template.
+- When the property changes it's value then same value will be updated on the template.
+
+
+Property Binding: <tag [attribute] = "property"></tag>
+- "Property Binding"  is used to send the data from coponent to template and assign the same into an attribute of the tag.
+- When the property is chnages it's value same value will be updated to the tag's attribute as well.
+
+Event Binding: <tag (event)="method()"></tag>
+- It is used to pass an event/notifications from template to component.
+- Here events will not start with "on" keyword.
+
+Two Way Binding:<tag [(ngModel)] = "property"></tag>
+- It is the combination of property binding and also event binding.
+- When we made chnages in template will get effected in component and if automatically for template chnages in compnent also.
+- To implement this we use [(NgModel)] directive.
+
+Note:  
+- Two way data binding is applicable only for <input> and <select> tags.
+- If we want to use input elements/Forms in angular appliction we should include a module i.e. "FormsModule" under the module.ts file.
+----------------------------------------------------------------------------------------
+codewithsrikanth@gmail.com
+
+Builtin - Directives in Angular:
+- A directive in Angular is used to chnage the behaviour of the DOM(Document Object Model) elements.
+- It is used to add the additional dynemic behaviour to the HTML elements.
+- There are 3 types of directives
+	- Structural: It just used to add the structure for the DOM, It just used to add the elements into the DOM at runtime based on conditions. Examples: *ngFor, *ngIf, *ngSwitch, *ngSwitchCase etc.
+	- Attribute: These directives will add/modify the behaviour of the elements like adding colours dynemically or removing colors and all the CSS properties if we want to add then will use this. Example [NgStyle] and [NgClass]
+	- Component: Custom Directives
+
+Style: It is used to set the CSS property values dynemically at runtime..
+- Once we cahnge the value then automatcally it changes the behaviour of html element as well.
+- <tag [style.cssProperty]="property"></tag>
+
+ngClass: It is used to apply the CSS classes dynemically.
+- If we want to apply more than one CSS style for an HTML element we use this approch.
+- <tag [ngClass]="property"></tag>
+----------------------------------------------------------------------------------------
+Upgrade to latest version of angular in machine?
+Step-1:> npm uninstall -g @angular/cli
+Step-2:> npm cache clear
+Step-3:> npm cache verify
+Step-4:> npm install -g @angular/cli@latest
+
+Bootstrap Integration:
+- To install bootstrap we use "NPM(Node Package Manager)".
+- Open the command prompt -> use the command like "npm install bootstrap".
+- It will download the packages into "node_modules" folder and, package information will be registered under the "package.json" file.
+- Will register in styles.css file like
+	"@import '../node_modules/bootstrap/dist/css/bootstrap.css';"
+
+
+*ngIf:
+- It is a structural directive which can be used to manipluate the DOM elements means dynemically we can add/remove the elements based on the conditions.
+- <tag *ngIf="property"></tag>
+- Once if the property value is true then it will display that element, else it won't display.
+
+*ngIf and else:
+- If the condition is true one element is displayed else it will display another element.
+- <tag *ngIf="condition;then template1;else template2"></tag>
+	<ng-template #template1></ng-template>
+	<ng-template #template2></ng-template>
+- <ng-template> is a container, where we can have any tags inside that.
+
+ngSwitch:
+- It is similar to normal switch case, that ngSwitch will check the value of the variable, wether it matches with any of the case labels.
+- Once if it is matched then it will render that perticular HTML elememnts
+- Syntax:
+<tag [ngSwitch]="property">
+    <tag *ngSwitchCase=" 'value' "></tag>
+    <tag *ngSwitchCase=" 'value' "></tag>
+	......
+    <tag*ngSwitchDefault></tag>
+</tag>
+----------------------------------------------------------------------------------------
+*ngFor: It is a directive which can be used to process the collection members like Array, JSON, Objects etc.
+- For every iteration it will generate an element and that element is processed.
+- Syntax:
+
+<tag *ngFor="let x of Collection">...</tag>
+----------------------------------------------------------------------------------------
+ngFor by using Object Array Add/Remove/Sort/Filter:
+- When we are working with Arrays, In Javascirpt a class is avaible to perform manipulations like 
+	- push()	: It is used to add an element at the end of the array object
+	- splice()	: It is used for remove/add element
+	- pop()	: It is used to remove an element which is prepsented at end
+	- filter()	: Used to filter the data.
+	- sort()	: It can be used to perform sorting like ascending/descending
+--------------------------------------------------------------------------------------------------------------
+Nested Components and Nested Modules:
+- We can create multiple components and modules as per the requirement of the project.
+- Components will be used like a sections for the web page and modules will increse the modularity of the web applications.
+- At root level we can have only one component and Module so that when we create the application by defualt we have "app.component.ts" and also "app.module.ts" .
+- Remaining every we create are the child components and child modules.
+
+Note: Once we register a component in one module, if we try to redecalre in another module it throws error.
+
+Example:
+- Create an Angular Application
+- Create the Components
+- Define the styles in style.css file
+- Verify the app.module.ts, where all the components are registerd or not.
+- In app.component.html define the root components like
+	Employee and Student
+- In child components will invoke remaing things by specifying selectors.
+--------------------------------------------------------------------------------------------------------------
+Datasharing between the components:
+- To share the data from one component to another component in Angular we have 4 options
+	- @Input()
+	- @Output()
+	- @ViewChild()
+	- @ViewChildren()
+
+@Input(): This decorator is used to access the data from parent component to child components.
+- At the time of creating properties in child component will define it by using @Input() decorator	@Input() Eno;
+	@Input() Ename;
+	@Input() Salary;
+- To work with @Input() and share the data follow the below steps
+	- Create the child component and define the properties using @Input()
+	- Create parent component with data.
+	- Map the parent component data with child component properties
+	- Intilize parent component.
+
+@Output(): This decorator is used to share the data from child component to parent component.
+- To work with this we will follow below steps like
+	- Declare the @Output decorator in child component and define an event by using a class i.e. EventEmitter from @angular/core library.
+	- Fire the event from child component template.by using any html control and any event we can use.
+	- From the event handler bind the data to Output decorator property by using a method emit().
+	- Map the event in the parent component.
+
+@ViewChild():
+- This decorator is used to share the data from two sibling components
+- It is used to manipulate the data from one component to another component as well.
+- To work with this we will create an Object of the component from the decorator like @ViewChild(FirstComponent,{static:true}).
+
+@ViewChildren():
+- It can be used to manipulate multiple components at once.
+--------------------------------------------------------------------------------------------------------------
+Services in Angular:
+- A service is a reusable block of code which can be used across multiple components.
+- Practically services can be used to implement methods for CRUD operations by using AJAX implmentation.
+- A service in angular is a typescript class, which comes with a decorator "@Injectable()", This decorator is avilable in "@angular/core".
+- This @Injectable() will contain a metadata property i.e. "providedIn:root", the purpose of this property is used to available the property globally.
+- To create a service we use a CLI command like "ng g service <nameOfService>".
+RestAPI Service Calls:
+- To work with RestAPI, we use a class i.e. "HttpClient" class.
+- This class is avaible under "@angular/common/http".
+- It is continusly make a request to the server, what it gives it will observe., so that the return type of HttpClient is "Observable".
+- This class is avaible in a library i.e. "rxjs", it stands for Reactive Extension Javascript.
+Note: To work with Parallel execution of component we use "Observable" from 'rxjs-compat', becasue it is having a method i.e. "forkJoin([])".
+--------------------------------------------------------------------------------------------------------------
+Pipes in Angular:
+- It is a concept which can be used to process/filter the data before it is rendedrd into the browser.
+- It can be used only interpolation syntax mostly.
+- To bind the pipe for a property we use "|"
+- Syntax:	{{propertyName | pipename:[Options]}}
+- Example: 
+	{{Ename | lowercase}}
+	{{Salary | currency}}
+	{{Employee | json}}
+
+Custom Pipes:
+If the above pipes(Pre-Defined) are not meet our requirement then we will go with our own pipe i.e. Custom Pipe.
+-It is also a typescript class which has @Pipe() decorator and implemnts from "PipeTransform" interface.
+- PipeTransform interface is having a method i.e. "Transform()" which can be used to transform the data into desired format.
+- Transform() will contain first argument as "value" used to takes the value and  "...args" it is an array which can be used to provide options and it is optional to have.
+- Once if the Custom pipe is ready wil be register under the Module declaration section.
+Note: To create a custom pipe we use a command i.e. "ng g p <nameOfPipe>".
+----------------------------------------------------------------------------------------
+Custom Directives:
+- A directive can be used to add the custom behaviour/ manipulate the DOM.
+- These directives are two types
+	- Pre-Defined Directives
+		- Attribute Directives   : Behaviour([ngStyle],[ngClass])
+		- Structural Directives  : *ngFor,*ngIf,*ngSwitch etc.
+	- Custom Directives
+- The directives that are avaible is not meet our requirement will create custom directives and wil use them in the template
+- While working with directives we need to have two seperate decorator which can be used to bind the data and events to the elements
+* import Input(): It is used to pass the data dynemically to the custom directive
+* import HostListner() : It is used to apply the events.
+* import ElementRef: It is used to manipulate the DOM.
+----------------------------------------------------------------------------------------
+Display data in Grid and applying Pagination, Sorting and Filtering:
+- To work with above functionalities we will use following packages and define Modules in app.module.
+
+- Paging: 
+	> npm install --save ngx-pagination
+	> import {NgxPaginationModule} from 'ngx-pagination'; 
+
+- searching:
+	> npm install --save ng2-search-filter
+	> import {Ng2SearchPipeModule} from 'ng2-search-filter';
+
+- Sorting:
+	> npm install --save ngx-order-pipe
+	> import {OrderModule} from 'ngx-order-pipe';
+
+- Bootstrap:
+	> npm install bootstrap --save
+
+- JQuery:
+	> npm install jquery --save
+
+Note: 
+- Once we install bootstrap and jQuery we will register that in angular.json file.
+----------------------------------------------------------------------------------------
+Single Page Application:
+- An application which can load it's content without refresh the entire page.
+- Loading one component's template into another component's template.
+- In order to implment SPA we use a machanism in Angular i.e. "Routing".
+- "Routes" is a pre-defined class can be used to implement the Routing.
+- "Routes" class is avaible in a module i.e. "RouterModule".
+- "Router"is the pre-defined class can be used to implement Single Page Applications.
+Note: Routes are nothing but URL's to navigate the page.
+
+Step-1: Import the classes like "Routes","Router" and "RouterModule" in "@angular/router" package.
+Step-2: Create the components and provide some defuatl implementation.
+Step-3: Create the Links by using [RouterLink] attribute of anchor tag
+Step-4: Implement the Routing
+
+/one	=>	PageOne Component
+/two	=>	PageTwo Component
+/three	=>	PageThree Component
+
+Creating Child Routes in Single Page Application:
+Step-1: Create the child component and provide the implementation.
+Step-2: Provide the Links for the child routes.
+Step-3: Implment the child routing in route module file
+
+Route Guards:These are used to gives the perfmission beore/after entering into the routes.
+- canActive: It is used to give permissions to enter into main route.
+- canDeactivate: Used to give permission to leave main route
+- canActivateChild: Used to give permissions to enter into child routes.
+Note: All the above guards should be implmented by using a service in angular.
+----------------------------------------------------------------------------------------
+Angular Forms and validations:
+- Angular framework provide two different types of forms
+	- Template Driven Forms
+	- Model/Reactive Forms(Importent)
+
+Template Driven Forms:
+- These forms are best suitable for small and simple forms with limited input elements.
+- In filed in this is repesented as a property in component.
+- Validations has to be defined in the template by uisng HTML5 validations.
+- To work with this we have to include "FormsModule" and it is avaibale in "@angular/forms".
+
+HTML5 Validation attributes:
+	- required
+	- minlength
+	- maxlength etc.
+
+Angular validation properties:
+	- touched
+		true	:	filed is focused
+		flase	:	filed is not focused
+	- untouched
+		true	:	filed is not focused.
+		false	:	filed is focused
+	- pristine
+		true	:	Filed is not modified by the user
+		flase	:	Filed is modified by the user
+	- dirty
+		flase	:	Filed is not modified by the user
+		true	:	Filed is modified by the user
+	- valid
+		true	:	Filed value is valid
+		false	:	Filed value is invalid
+	- invalid
+		flase	:	Filed value is valid
+		true	:	Filed value is invalid
+	- errors	:	This is used to represent the errors
+		required
+		minlength
+		pattern
+		number
+		email
+		url etc.
+----------------------------------------------------------------------------------------
+Reactive/Model Driven Forms:
+- These forms are new type of forms in angular, which are suitable for creating large forms with many fileds and also complex validations.
+- Here complete logic should be written in Component only i.e. *.ts file.
+- In Here every input control is represented as a "FormControl" and these are represented as a "FormGroup".
+- To work with this we include a package i.e. "ReactiveFormsModule" and whcih is avaible under "@angular/forms".
+- These are introduced in Angular 4.0 but in action from Angular 5.0.
+- All the validation rules are defined under the object i.e. "validators" like
+	validators.required		:	filed is mandatory
+	validators.minlength	:	Minimum charecters
+	validatorts.maxlength	:	Maximim charctres
+	validators.pattern		:	Regular expression etc.
+----------------------------------------------------------------------------------------
+Lazy Loading in Angular: 
+- Every angular application will load all the module at a time when the application loads, these kind of loading is called "Eager Loading".
+- But if we want to load the module based on the requirement, then that is called "Lazy loading".
+- This is required only to reduce the intial load time and improve the performence when we have large modules.
+- To implment Lazy loading we use a guard i.e. "CanLoad".
+----------------------------------------------------------------------------------------
+Unit Testing:
+- It is nothing but testing a block of functionality by the developer.
+- If the functionality is executed properly and return the expected value in a proper way then those test cases are pass else it is fail.
+
+Packages for Unit Testing:
+- Jasmine		:	Used to define the Test cases
+- Protractor	:	Used to execute the test cases
+- Karma		:	Used to execute the test cases in different browsers
+
+Karma	=>	Protractor	=>	Jasmin.
+Note: By default Angular7 onwards all the above packages are integrated to the applications.
+----------------------------------------------------------------------------------------
+Angular Meterial: 
+- It is UI level framework, which can be used to create the UI by using Angular and Typescript.
+- To include it we use a library "ng add @angular/material"
+
+Angular Life Cycle Hooks:
+- It is nothing but from creating the component and destroying the component how a component will undergo to different stages.
+- In Component Life cycle hooks we have different stages like
+	
+	- ngOnInit()
+	- constructor
+	- ngOnChnages()
+	- ngDoCheck()
+		- ngAfterContetnInit()
+		- ngAfterContentCheck()
+		- ngAfterViewInit()
+		- ngAfterViewChecked()
+	- ngDestroy()
+
+- ngOnInit(): It is executed whenever the component is initilized.
+- ngOnChange(): It is executed when the component's value gets chnaged.
+- ngDoCheck(): It is sepcified an event, which can be used to identify the chnages explicitly, the action will be executed when we have any deep chnages of component.
+- ngOnDestroy(): When the component is removed from the DOM then this will get executed.
+- constructor: It is used to initilize data to the component.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
